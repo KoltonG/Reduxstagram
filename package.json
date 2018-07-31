@@ -7,7 +7,7 @@
     "build": "npm run clean && npm run build:webpack",
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
     "clean": "rimraf dist",
-    "start": "node devServer.js",
+    "start": "babel-node devServer.js",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/KoltonG/Reduxstagram#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.7.7",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
