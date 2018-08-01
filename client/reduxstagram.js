@@ -6,12 +6,15 @@ import { render } from 'react-dom';
 import CSS from './styles/style.styl';
 
 // Components imports
-import Main from './components/Main'; 
+import App from './components/App'; 
 import Single from './components/Single'; 
 import PhotoGrid from './components/PhotoGrid';
 
 // React router and dependencies import
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import store, { history } from './store'
+
 /**
  * The router is binded to the page and then paths are placed as children components
  * 
@@ -22,12 +25,14 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
  * You can also nest routes within each other
  */
 const router = (
-  <Router history={browserHistory}>
-    <Route path='/' component={Main}>
-      <IndexRoute component={PhotoGrid}></IndexRoute>
-      <Route path='/view/:postId' component={Single}></Route>
-    </Route>
-  </Router>
+  <Provider store={store}>  
+    <Router history={history}>
+      <Route path='/' component={App}>
+        <IndexRoute component={PhotoGrid}></IndexRoute>
+        <Route path='/view/:postId' component={Single}></Route>
+      </Route>
+    </Router>
+  </Provider>
 )
 
 render(router, document.getElementById('root'));
