@@ -1,13 +1,13 @@
 import React from 'react';;
 
-class PhotoGrip extends React.Component {
+class PhotoGrid extends React.Component {
   render() {
     return (
       <div className='photo-grid'>
-      
+        This is the photo grid component
       </div>
     )
   }
 }
 
-export default PhotoGrip;
+export default PhotoGrid;
