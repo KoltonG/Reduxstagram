@@ -1,4 +1,4 @@
-import { createStore, compose } from 'redux';
+import { createStore }          from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory }       from 'react-router';
 
@@ -6,7 +6,7 @@ import { browserHistory }       from 'react-router';
 import rootReducer from './reducers/index';
 
 // Importing mock data
-import posts from './data/posts';
+import posts    from './data/posts';
 import comments from './data/comments';
 
 // Create an object to store the the mock data together

@@ -1,19 +1,19 @@
 // Library imports
-import React from 'react';
+import React      from 'react';
 import { render } from 'react-dom';
 
 // Importing styles for webpack. Webpack will insert the style tag in the index.html file
 import CSS from './styles/style.styl';
 
 // Components imports
-import App from './components/App'; 
-import Single from './components/Single'; 
-import PhotoGrid from './components/PhotoGrid';
+import App        from './components/App'; 
+import Single     from './components/Single'; 
+import PhotoGrid  from './components/PhotoGrid';
 
 // React router and dependencies import
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import { Provider } from 'react-redux';
-import store, { history } from './store'
+import { Router, Route, IndexRoute }  from 'react-router';
+import { Provider }                   from 'react-redux';
+import store, { history }             from './store'
 
 /**
  * The router is binded to the page and then paths are placed as children components
