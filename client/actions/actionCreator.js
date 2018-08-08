@@ -1,5 +1,7 @@
 /**
- * Actions creators for Redux. This will store all the possible actions that can be performed on our application. These create the actions and what is returned will be what is being dispatched to Redux
+ * Actions creators for Redux. This will store all the possible actions that can be performed on our application. These create the actions and what is returned will be what is being dispatched to Redux.
+ * 
+ * This is the only way that information can be sent to reducers to be placed in the store.
  */
 
 /**
@@ -8,7 +10,7 @@
  */
 export function incrementLikes(index) {
   return {
-    type: 'Increment Likes',
+    type: 'INCREMENT_LIKES',
     index
   }
 }
@@ -21,7 +23,7 @@ export function incrementLikes(index) {
  */
 export function addComment(postId, author, comment) {
   return {
-    type: 'Add Comment',
+    type: 'ADD_COMMENT',
     postId,
     author,
     comment
@@ -35,7 +37,7 @@ export function addComment(postId, author, comment) {
  */
 export function removeComment(postId, index) {
   return {
-    type: 'Remove Comment',
+    type: 'REMOVE_COMMENT',
     postId,
     index
   }
