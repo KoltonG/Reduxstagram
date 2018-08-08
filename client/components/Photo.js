@@ -8,7 +8,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 class Photo extends React.Component {
   render() {
     // Creating const to simplify referencing to props
-    const { post, comments } = this.props;
+    const { post, comments, index } = this.props;
 
     // Component return
     return (
@@ -30,7 +30,7 @@ class Photo extends React.Component {
           <figcaption>
             <p>{post.caption}</p>
             <div className="control-buttons">
-              <button className="likes">&hearts; {post.likes}</button>
+              <button className="likes" onClick={this.props.incrementLikes.bind(null, index)}>&hearts; {post.likes}</button>
               <Link className='button' to={`/view/${post.code}`}>
                 <span className="comment-count">
                   <span className="speech-bubble"></span>
