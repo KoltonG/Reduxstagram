@@ -10,9 +10,8 @@
  * @param {Object} state The given state of the application, however defaulted to an empty array for when there is no state.
  * @param {Object} action Action that happened
  */
-function comments(state = [], action) {
-  console.log(state, action);
-  return state;
+function comments(comments = [], action) {
+  return comments;
 }
 
 export default comments
