@@ -1,19 +1,23 @@
-// Library imports
-import React      from 'react';
-import { render } from 'react-dom';
+import React                          from 'react';
+import { render }                     from 'react-dom';
+import { Router, Route, IndexRoute }  from 'react-router';
+import { Provider }                   from 'react-redux';
+import store, { history }             from './store'
 
-// Importing styles for webpack. Webpack will insert the style tag in the index.html file
-import CSS from './styles/style.styl';
+// Importing CSS styles
+import CSS from './styles/style.styl'
 
-// Components imports
+// Importing components
 import App        from './components/App'; 
 import Single     from './components/Single'; 
 import PhotoGrid  from './components/PhotoGrid';
 
-// React router and dependencies import
-import { Router, Route, IndexRoute }  from 'react-router';
-import { Provider }                   from 'react-redux';
-import store, { history }             from './store'
+// Importing Sentry
+import Raven from 'raven-js';
+import { sentry_url } from './data/config';
+
+// Initializing Sentry 
+Raven.config(sentry_url).install();
 
 /**
  * The router is binded to the page and then paths are placed as children components
