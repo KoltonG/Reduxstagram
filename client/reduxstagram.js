@@ -14,7 +14,7 @@ import PhotoGrid  from './components/PhotoGrid';
 
 // Importing Sentry
 import Raven from 'raven-js';
-import { sentry_url } from './data/config';
+import { sentry_url } from './data/sentry-config';
 
 // Initializing Sentry 
 Raven.config(sentry_url).install();
